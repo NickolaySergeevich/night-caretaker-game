@@ -1,0 +1,375 @@
+{
+  "version": 1,
+  "seed": 20261014,
+  "sample_rate": 48000,
+  "channels": 1,
+  "encoding": "WAV PCM16 little-endian",
+  "runtime_budget_bytes": 8388608,
+  "source": "tools/audio/night-caretaker/generate.py",
+  "assets": [
+    {
+      "id": "amb_vent",
+      "path": "amb_vent.wav",
+      "duration_s": 6.0,
+      "loop": true,
+      "purpose": "Независимая вентиляция здания",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 576044,
+      "sha256": "564fd4354d47fead285b63b0146c2517b77cdd1422667a1d37248d9964236e1d"
+    },
+    {
+      "id": "amb_electric",
+      "path": "amb_electric.wav",
+      "duration_s": 6.0,
+      "loop": true,
+      "purpose": "Фон питания; отключать отдельно от вентиляции",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 576044,
+      "sha256": "1289cf54bd889cf057eaa766c5448d639acbc9d0445c30e275889d9f42bee10d"
+    },
+    {
+      "id": "step_hard_01",
+      "path": "step_hard_01.wav",
+      "duration_s": 0.25,
+      "loop": false,
+      "purpose": "Собственные шаги: твёрдый пол коридора",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 24044,
+      "sha256": "5b1ed5caeadf390b367ce757404ace90422447f7d02c14412969b404917f1b5f",
+      "pre_softening_sha256": "34393dae03fd8f4dfcf44df721af4c7a83ec63a8f00e9ff332d9da7306498d72",
+      "processing": {
+        "lowpass_hz": 3200,
+        "butterworth_order": 4,
+        "attack_ms": 18,
+        "release_ms": 45,
+        "peak_boost": false
+      }
+    },
+    {
+      "id": "step_hard_02",
+      "path": "step_hard_02.wav",
+      "duration_s": 0.25,
+      "loop": false,
+      "purpose": "Собственные шаги: твёрдый пол коридора",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 24044,
+      "sha256": "efa5dbef6c5acbeed5fa8c345c2a73ac01e4e402ab1012e2f40a35edb6fd144e",
+      "pre_softening_sha256": "50f22b088629c35a5b451f2a837daf96e673bac2a679728dcd2d51454492f495",
+      "processing": {
+        "lowpass_hz": 3200,
+        "butterworth_order": 4,
+        "attack_ms": 18,
+        "release_ms": 45,
+        "peak_boost": false
+      }
+    },
+    {
+      "id": "step_hard_03",
+      "path": "step_hard_03.wav",
+      "duration_s": 0.25,
+      "loop": false,
+      "purpose": "Собственные шаги: твёрдый пол коридора",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 24044,
+      "sha256": "cfea4df18c265001845c8b45d907652100fad8b9c8190b6312c6d3811997e912",
+      "pre_softening_sha256": "eaf64746cbf764f7231d435562c38ad7e1be2ae3e114d0d8804a2397e42f432d",
+      "processing": {
+        "lowpass_hz": 3200,
+        "butterworth_order": 4,
+        "attack_ms": 18,
+        "release_ms": 45,
+        "peak_boost": false
+      }
+    },
+    {
+      "id": "step_hall_01",
+      "path": "step_hall_01.wav",
+      "duration_s": 0.3,
+      "loop": false,
+      "purpose": "Собственные шаги: пол зала; сухой звук, акустика в игре",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 28844,
+      "sha256": "c1a9587019205e0b2ab8983c4e51acba74925e8c65fda62fef9e2f23b8270b1d",
+      "pre_softening_sha256": "f8673e415b3b805458fab7cfd11ca4b2f4ba6b722983f6a26f62fe50dadb10a4",
+      "processing": {
+        "lowpass_hz": 3200,
+        "butterworth_order": 4,
+        "attack_ms": 18,
+        "release_ms": 45,
+        "peak_boost": false
+      }
+    },
+    {
+      "id": "step_hall_02",
+      "path": "step_hall_02.wav",
+      "duration_s": 0.3,
+      "loop": false,
+      "purpose": "Собственные шаги: пол зала; сухой звук, акустика в игре",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 28844,
+      "sha256": "72205b808ddba28ae96113604d6f62a8986f5072caa27107e045d8e093bdb073",
+      "pre_softening_sha256": "e801d88dbca4755c30c4ed295e563101a4ada3edd4e115f7760dcebaded78384",
+      "processing": {
+        "lowpass_hz": 3200,
+        "butterworth_order": 4,
+        "attack_ms": 18,
+        "release_ms": 45,
+        "peak_boost": false
+      }
+    },
+    {
+      "id": "step_hall_03",
+      "path": "step_hall_03.wav",
+      "duration_s": 0.3,
+      "loop": false,
+      "purpose": "Собственные шаги: пол зала; сухой звук, акустика в игре",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 28844,
+      "sha256": "bc2aee3bd22e0da724d1d0955e1effee83d62c0c96fc7120c9a15db874f87fd8",
+      "pre_softening_sha256": "2b468cf3dc5f2c03a7422f6cd0450cafe4cb68bf240723648ec7211dd75b0ce0",
+      "processing": {
+        "lowpass_hz": 3200,
+        "butterworth_order": 4,
+        "attack_ms": 18,
+        "release_ms": 45,
+        "peak_boost": false
+      }
+    },
+    {
+      "id": "keys",
+      "path": "keys.wav",
+      "duration_s": 0.85,
+      "loop": false,
+      "purpose": "Взять связку ключей",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 81644,
+      "sha256": "108978eae3126553aaddf8b45f6eb8fcf2500f0537f92e13b492e25d577e7aee"
+    },
+    {
+      "id": "lock",
+      "path": "lock.wav",
+      "duration_s": 0.52,
+      "loop": false,
+      "purpose": "Запереть",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 49964,
+      "sha256": "509990b8ab604cfcf8869ebc79b65490f6ba96813025decfa66ea5e2bff623be"
+    },
+    {
+      "id": "unlock",
+      "path": "unlock.wav",
+      "duration_s": 0.52,
+      "loop": false,
+      "purpose": "Отпереть",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 49964,
+      "sha256": "009ee9d4109f8797eac1e26cb0ba673c529298d3628e92efb245bd7e940c0101"
+    },
+    {
+      "id": "door_open",
+      "path": "door_open.wav",
+      "duration_s": 0.9,
+      "loop": false,
+      "purpose": "Открыть дверь",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 86444,
+      "sha256": "887efd6f5f5a0c71e27e153419573c86a4171ed480f2cd4928fd56b12bef9b82"
+    },
+    {
+      "id": "door_close",
+      "path": "door_close.wav",
+      "duration_s": 0.82,
+      "loop": false,
+      "purpose": "Закрыть дверь, включая выход",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 78764,
+      "sha256": "327d7f76a37261c4243ac1f85876a516bf14d3656dad9e42f5669d4e504228f5"
+    },
+    {
+      "id": "switch",
+      "path": "switch.wav",
+      "duration_s": 0.16,
+      "loop": false,
+      "purpose": "Выключатель света; без звука для фонаря по умолчанию",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 15404,
+      "sha256": "3d99a811e2d9781ac29cffac852d885f468a30d76ef10dce228157daf5a85938"
+    },
+    {
+      "id": "pipe_tick",
+      "path": "pipe_tick.wav",
+      "duration_s": 0.42,
+      "loop": false,
+      "purpose": "Обычный щелчок трубы до аномалий",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 40364,
+      "sha256": "1572d65338929856fb8dd9f0e551c4d18cd125890531be0318531bee04d6a880"
+    },
+    {
+      "id": "knock_player_01",
+      "path": "knock_player_01.wav",
+      "duration_s": 0.36,
+      "loop": false,
+      "purpose": "Один удар игрока по двери",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 34604,
+      "sha256": "e131e60badcf56247c130abfc75bfb80a32489b500881b1c9d63342ad415cdba"
+    },
+    {
+      "id": "knock_player_02",
+      "path": "knock_player_02.wav",
+      "duration_s": 0.36,
+      "loop": false,
+      "purpose": "Один удар игрока по двери",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 34604,
+      "sha256": "4aa2f4799d626078931511bf1f6ffabbe9fa01849765a0659463046a4178594a"
+    },
+    {
+      "id": "knock_player_03",
+      "path": "knock_player_03.wav",
+      "duration_s": 0.36,
+      "loop": false,
+      "purpose": "Один удар игрока по двери",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 34604,
+      "sha256": "d5b2daf30bddce6be67e4e68540fc133cc52cac8a9cabb1547aa7f3c8cbcb9e4"
+    },
+    {
+      "id": "knock_reply_01",
+      "path": "knock_reply_01.wav",
+      "duration_s": 0.36,
+      "loop": false,
+      "purpose": "Один ответный удар; сохранять ID при переносе на пост",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 34604,
+      "sha256": "02de9c646012bebe32a405dd8b8d442c2f894a7eb99e69d5a010e46a216afbd6"
+    },
+    {
+      "id": "knock_reply_02",
+      "path": "knock_reply_02.wav",
+      "duration_s": 0.36,
+      "loop": false,
+      "purpose": "Один ответный удар; сохранять ID при переносе на пост",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 34604,
+      "sha256": "4f940db24450b07b4be91fc4f94e4348df95da66ab1463ea907bb5b20abd16be"
+    },
+    {
+      "id": "knock_reply_03",
+      "path": "knock_reply_03.wav",
+      "duration_s": 0.36,
+      "loop": false,
+      "purpose": "Один ответный удар; сохранять ID при переносе на пост",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Procedural approximation; listening, TV comfort and in-game mix unverified.",
+      "bytes": 34604,
+      "sha256": "d133c38222dc249e9aafa4657b808ac0e17254a3e14a8cd8baeb78359f476426"
+    },
+    {
+      "id": "dev_printer",
+      "path": "dev_printer.wav",
+      "duration_s": 3,
+      "loop": true,
+      "purpose": "Принтер в офисе",
+      "origin": "Original local deterministic procedural synthesis; no recordings or models.",
+      "source": "tools/audio/night-caretaker/extend.py",
+      "limitations": "TV listening pending.",
+      "bytes": 288044,
+      "sha256": "ac12cd3d6f0c6cfd8bf49c8900c93fed76f43acab7633db78a54d0049b705c01"
+    },
+    {
+      "id": "dev_projector",
+      "path": "dev_projector.wav",
+      "duration_s": 3,
+      "loop": true,
+      "purpose": "Вентилятор проектора; затухание в микшере",
+      "origin": "Original local deterministic procedural synthesis; no recordings or models.",
+      "source": "tools/audio/night-caretaker/extend.py",
+      "limitations": "TV listening pending.",
+      "bytes": 288044,
+      "sha256": "4bcdc651dce0d53855fd6c41d6a9bf465a65caabb06a4606b8bd4263166b3cac"
+    },
+    {
+      "id": "chair",
+      "path": "chair.wav",
+      "duration_s": 0.7,
+      "loop": false,
+      "purpose": "Один скрип стула в библиотеке",
+      "origin": "Original local deterministic procedural synthesis; no recordings or models.",
+      "source": "tools/audio/night-caretaker/extend.py",
+      "limitations": "TV listening pending.",
+      "bytes": 67244,
+      "sha256": "621cc0ae1054927287d9f11150af81f3826cf2b87f598cdf3603b9fd31ad8027"
+    },
+    {
+      "id": "paper",
+      "path": "paper.wav",
+      "duration_s": 0.6,
+      "loop": false,
+      "purpose": "Шелест бумаги у вентиляции",
+      "origin": "Original local deterministic procedural synthesis; no recordings or models.",
+      "source": "tools/audio/night-caretaker/extend.py",
+      "limitations": "TV listening pending.",
+      "bytes": 57644,
+      "sha256": "b93280cb9d338a1f1718e1d495b91e30e3686132dfc51ca6f8f0073e024d8e30"
+    },
+    {
+      "id": "breaker",
+      "path": "breaker.wav",
+      "duration_s": 0.2,
+      "loop": false,
+      "purpose": "Автомат щитка",
+      "origin": "Original local deterministic procedural synthesis; no recordings or models.",
+      "source": "tools/audio/night-caretaker/extend.py",
+      "limitations": "TV listening pending.",
+      "bytes": 19244,
+      "sha256": "eded2e8a54553ba12f99746ac73e6fcf53239a2c83ea939b133bdc58ff4aac0f"
+    }
+  ],
+  "demos": [
+    {
+      "id": "preview_interactions",
+      "path": "demos/preview_interactions.wav",
+      "duration_s": 9.5,
+      "loop": false,
+      "purpose": "Взаимодействия; с 4 с исчезает электрический слой, вентиляция остаётся",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Offline mono preview, no spatial game processing; not a runtime asset.",
+      "bytes": 912044,
+      "sha256": "88f09fb32237995107b68b79c32f20fdb5602b4decfc4d0c5c630be8c9424f86"
+    },
+    {
+      "id": "preview_rhythm",
+      "path": "demos/preview_rhythm.wav",
+      "duration_s": 9,
+      "loop": false,
+      "purpose": "Игрок / ответ / те же ID и интервалы повторно; расположение зала и поста здесь не имитируется",
+      "origin": "Original local procedural synthesis; no recordings, models or network.",
+      "limitations": "Offline mono preview, no spatial game processing; not a runtime asset.",
+      "bytes": 864044,
+      "sha256": "13af6c6b36a7dc136f4843731c27af92f40ac3f61ee59b0b4148bff54dc71354"
+    }
+  ],
+  "extension_source": "tools/audio/night-caretaker/extend.py"
+}

@@ -1,0 +1,44 @@
+name: Source checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  godot:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      GODOT_SILENCE_ROOT_WARNING: '1'
+      XDG_DATA_HOME: ${{ github.workspace }}/.ci-data
+      XDG_CACHE_HOME: ${{ github.workspace }}/.ci-cache
+      XDG_CONFIG_HOME: ${{ github.workspace }}/.ci-config
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install verified official Godot 4.6.3
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 -o /tmp/godot.zip https://github.com/godotengine/godot-builds/releases/download/4.6.3-stable/Godot_v4.6.3-stable_linux.x86_64.zip
+          echo 'd0bc2113065e481c9c2c2b2c37daa4e8be3fe9e27f0ab9ab0b6096e9a37907f3  /tmp/godot.zip' | sha256sum --check
+          unzip -q /tmp/godot.zip -d /tmp/godot-bin
+          chmod +x /tmp/godot-bin/Godot_v4.6.3-stable_linux.x86_64
+          mkdir -p "$XDG_DATA_HOME" "$XDG_CACHE_HOME" "$XDG_CONFIG_HOME"
+          echo '/tmp/godot-bin' >> "$GITHUB_PATH"
+      - name: Import, smoke and focused regression tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          GODOT=Godot_v4.6.3-stable_linux.x86_64
+          "$GODOT" --headless --path editions/godot --editor --import --quit 2>&1 | tee /tmp/import.log
+          ! grep -E "(^|[[:space:]])(SCRIPT ERROR|ERROR:)" /tmp/import.log
+          "$GODOT" --headless --path editions/godot --quit-after 90
+          "$GODOT" --headless --path editions/godot --script tests/test_gamepad_model.gd
+          "$GODOT" --headless --path editions/godot --script tests/test_soft_audio.gd
+          "$GODOT" --headless --path editions/godot --script tests/test_web_audio_boundary.gd

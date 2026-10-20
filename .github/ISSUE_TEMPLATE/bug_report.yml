@@ -1,0 +1,22 @@
+name: Bug report / Ошибка
+description: Report a reproducible game problem
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version / Версия
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: OS, browser and input device / Платформа и управление
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps, expected result and actual result / Шаги и результат
+      description: Do not include secrets or personal data.
+    validations:
+      required: true

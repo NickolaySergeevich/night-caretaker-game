@@ -1,0 +1,10 @@
+.godot/
+build/
+.cache/
+.DS_Store
+.env
+.env.*
+*.log
+.ci-data/
+.ci-cache/
+.ci-config/
